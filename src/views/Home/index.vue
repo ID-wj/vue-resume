@@ -1,14 +1,15 @@
 <template>
-  <div id="md"></div>
+  <div>{{count}}</div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
 
 export default defineComponent({
   setup() {
-    
+    const count = ref(0)
     return {
+      count
     };
   },
 });
