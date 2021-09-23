@@ -1,9 +1,10 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import { create, NButton, NLayout, NLayoutHeader, NLayoutContent } from 'naive-ui'
+import '@/assets/css/mian.scss'
+import { create, NButton, NLayout, NLayoutHeader, NLayoutContent, NInput } from 'naive-ui'
 
 const naive = create({
-    components: [NButton, NLayout, NLayoutContent, NLayoutHeader]
+    components: [NButton, NLayout, NLayoutContent, NLayoutHeader, NInput]
 })
 
 const app = createApp(App)

@@ -1,22 +1,24 @@
 <template>
   <div class="contain">
-    <NLayout position="absolute">
-      <NLayoutHeader bordered class="layout-header">ahhaahah</NLayoutHeader>
-      <NLayout>
-        <NLayoutContent>
-          <div style="height: 100%;background: chartreuse;">hah</div>
-          <!-- <NButton>contain</NButton> -->
-        </NLayoutContent>
-      </NLayout>
-    </NLayout>
+    <div class="layout-header">
+      <Header></Header>
+    </div>
+    <div class="layout-main">
+      <Content></Content>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import Header from './header.vue'
+import Content from './content.vue'
 
 export default defineComponent({
-
+  components: {
+    Header,
+    Content
+  }
 })
 </script>
 
@@ -26,10 +28,18 @@ export default defineComponent({
   height: 100vh;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   .layout-header {
     height: 50px;
     display: flex;
     align-items: center;
+    background: chartreuse;
+  }
+
+  .layout-main {
+    flex: 1;
+    padding: 20px;
   }
 }
 </style>
